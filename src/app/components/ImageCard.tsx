@@ -50,6 +50,10 @@ function PhotoCard({ post }: PostCardProps) {
       <Text fontSize="lg" fontWeight="bold">
         {post.name}
       </Text>
+      <Divider my="2" />
+      <Text fontSize="md"  mt="5" mb="5">
+        Comments:
+      </Text>
       <VStack spacing="2" align="start" mt="2">
         {postComments.map((comment: Comment, index: number) => (
           <Text key={index} fontSize="sm">
@@ -57,7 +61,6 @@ function PhotoCard({ post }: PostCardProps) {
           </Text>
         ))}
       </VStack>
-      <Divider my="2" />
       <CommentForm postId={post.id} onPostComment={handlePostComment}
       />
     </Box>

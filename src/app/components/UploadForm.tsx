@@ -82,6 +82,7 @@ function PhotoUploadForm({ onPostUploadComplete }: { onPostUploadComplete: () =>
         sx={{ ...styles, cursor: loading ? "not-allowed" : "pointer" }}
         onClick={handleUpload}
         disabled={loading}
+        mb="5"
       >
         Upload</Button>
     </VStack>

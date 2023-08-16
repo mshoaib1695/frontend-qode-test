@@ -11,7 +11,7 @@ export const uploadPhoto = async (payload: UploadPostPayload) => {
   try {
     const formData = new FormData();
     formData.append("image", photo);
-    formData.append("title", title);
+    formData.append("name", title);
     formData.append("description", description);
 
     const response = await fetch(`${baseUrl}/v1/posts/upload-photo`, {
