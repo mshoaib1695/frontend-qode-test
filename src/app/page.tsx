@@ -45,7 +45,7 @@ export default function Home() {
       <Container maxW="xl" mt="4">
         <Heading mb="4">Photo Upload and Comments</Heading>
         <PhotoUploadForm onPostUploadComplete={getPostsFn}/>
-        {posts.map((post) => (
+        {posts?.map((post) => (
           <PhotoCard key={post.id} post={post} />
         ))}
       </Container>
